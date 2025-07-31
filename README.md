@@ -1,7 +1,20 @@
-# react-native-pdf
+# react-native-pdf (forked)
 [![npm](https://img.shields.io/npm/v/react-native-pdf.svg?style=flat-square)](https://www.npmjs.com/package/react-native-pdf)
 
 A react native PDF view component (cross-platform support)
+
+### Adjustments
+
+Removed the following code as it conflicted with project's expected behaviour:
+```bash
+    // Disable built-in double tap, so as not to conflict with custom recognizers.
+    for (UIGestureRecognizer *recognizer in _pdfView.gestureRecognizers) {
+        if ([recognizer isKindOfClass:[UITapGestureRecognizer class]]) {
+            recognizer.enabled = NO;
+        }
+    }
+
+```
 
 ### Feature
 
