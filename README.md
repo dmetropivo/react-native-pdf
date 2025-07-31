@@ -7,6 +7,8 @@ A react native PDF view component (cross-platform support)
 
 Removed the following code as it conflicted with project's expected behaviour:
 ```bash
+    // ios/RNPDFPdf/RNPDFPdfView.mm
+
     // Disable built-in double tap, so as not to conflict with custom recognizers.
     for (UIGestureRecognizer *recognizer in _pdfView.gestureRecognizers) {
         if ([recognizer isKindOfClass:[UITapGestureRecognizer class]]) {
